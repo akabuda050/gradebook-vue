@@ -19,5 +19,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
-      - name: Test E2E
-        run: npm run test:e2e
+
+     - name: Test E2E
+        uses: cypress-io/github-action@v5
+        with:
+          start: npm run test:e2e
