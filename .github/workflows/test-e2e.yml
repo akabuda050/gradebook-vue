@@ -13,13 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install dependencies
-        run: ls -alh
+        run: npm install
       - name: Test E2E
         uses: cypress-io/github-action@v5
         with:
-          project: ./
-          browser: chrome
-          start: npm run preview
+          start: npx vite dev --port 4173
           wait-on: 'http://localhost:4173'
-          wait-on-timeout: 120
+          wait-on-timeout: 30
  
