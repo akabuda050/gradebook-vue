@@ -7,6 +7,9 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   base: './', // used for github pages. can be removed or changed later.
   plugins: [vue()],
+  server: {
+    host: 'localhost',
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),

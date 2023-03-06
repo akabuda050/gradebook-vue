@@ -17,7 +17,5 @@ jobs:
       - name: Test E2E
         uses: cypress-io/github-action@v5
         with:
-          build: npm run build
-          start: sudo npx http-server --port 80 ./dist
-          wait-on: http://localhost
+          command: npm run test:e2e
  
