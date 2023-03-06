@@ -18,6 +18,6 @@ jobs:
         uses: cypress-io/github-action@v5
         with:
           build: npm run build
-          start: npx http-server --port 80 ./dist
+          start: sudo npx http-server --port 80 ./dist
           wait-on: http://localhost
  
